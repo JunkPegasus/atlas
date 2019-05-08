@@ -39,8 +39,16 @@ html {
     color: white;
     padding: 0;
     margin: 0;
+    max-height: 100%;
+    overflow: hidden;
 }
-
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 nav {
     position: fixed;
     height: 30px;
@@ -48,7 +56,7 @@ nav {
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    border-bottom: 1px solid lighten($color: rgb(49, 56, 65), $amount: 10%);
+    border-bottom: 1px solid darken($color: rgb(49, 56, 65), $amount: 3%);
     .nav_gripbar {
         flex-grow: 1;
         text-align: center;
@@ -118,5 +126,95 @@ button {
         &.close:hover {
             background: rgb(148, 41, 41);
         }
+    }
+}
+
+div.page {
+    margin-top: 30px;
+    .sidemenu {
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        border-right: 1px solid darken($color: rgb(49, 56, 65), $amount: 3%);
+        .tools {
+            width: 100%;
+            padding: 10px;
+            div.btn {
+                height: 30px;
+                padding: 7px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                &:hover {
+                    background: lighten($color: rgb(49, 56, 65), $amount: 10%);
+                }
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        .list {
+            width: 100%;
+            .item {
+                display: flex;
+                padding: 3px 20px;
+                cursor: pointer;
+                color: darken($color: white, $amount: 50%);
+                align-items: center;
+                position: relative;
+                &:hover {
+                    color: white;
+                    background: lighten($color: rgb(49, 56, 65), $amount: 10%);
+                    &::before {
+                        opacity: 1;
+                        transform: translateX(0px) translateY(-50%); 
+                    }
+                }
+                &::before {
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 100%;
+                    top: 50%;
+                    position: absolute;
+                    left: 10px;
+                    background: #ed671a;
+                    opacity: 0;
+                    transform: translateX(-100px) translateY(-50%); 
+                    transition: all ease 0.2s;
+                }
+            }
+        }
+    }
+    .content {
+        position: absolute;
+        left: 300px;
+        width: calc(100% - 300px);
+        .grid {
+            width: 100%;
+        .row {
+            width: 100%;
+            display: flex;
+            border-bottom: 1px solid darken($color: rgb(49, 56, 65), $amount: 1%);
+            .column {
+                flex-grow: 1;
+                padding: 2px 6px;
+                &:not(:last-of-type) {
+                    border-right: 1px solid darken($color: rgb(49, 56, 65), $amount: 1%);
+                }
+            }
+            .column-1 {
+                flex-grow: 3;
+            }
+            .column-3 {
+                flex-grow: 2;
+            }
+        }
+        }
+
     }
 }

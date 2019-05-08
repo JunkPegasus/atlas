@@ -11,21 +11,54 @@
     <nav>
         <div class="nav_toolbar">
             <div class="nav_icon"><img src="img/icon/SVG/atlas.svg"></div>
-            <button class="btn_nav">Objekte</button>
+            <button class="btn_nav">Inhalte</button>
             <button class="btn_nav">Benutzer</button>
             <button class="btn_nav">Putzplan</button>
             <button class="btn_nav">Programm</button>
         </div>
         <div class="nav_gripbar"> </div>
-        <div class="nav_name">Atlas</div>
+        <div class="nav_name">Atlas - Berichte</div>
         <div class="nav_controlbar">
             <div class="nav_label">admin</div>
             <button class="btn_control" onclick="minimizeApp()"><img src="img/icon/SVG/minimize.svg"></button>
             <button class="btn_control close" onclick="closeApp()"><img src="img/icon/SVG/close.svg"></button>
         </div>
     </nav>
-    <script src="js/jquery.js"></script>
+
+    <div class="page" id="objects">
+        <div class="sidemenu">
+            <div class="tools">
+                <div class="btn"><img src="img/icon/SVG/refresh.svg"></div>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <div class="name">Berichte</div>
+                </div>
+                <div class="item">
+                    <div class="name">Vorstände</div>
+                </div>
+                <div class="item">
+                    <div class="name">Slides</div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="grid">
+                <div class="row header">
+                    <div class="column column-1 header">Name</div>
+                    <div class="column column-2 header">Views</div>
+                    <div class="column column-3 header">Status</div>
+                    <div class="column column-4 header">Datum geändert</div>
+                    <div class="column column-5 header">Benutzer geändert</div>
+                    <div class="column column-6 header">Datum angelegt</div>
+                    <div class="column column-7 header">Benutzer angelegt</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>window.$ = window.jQuery = require('jquery');</script>
     <script src="js/workflow.js"></script>
+    <script src="js/html.js"></script>
 </body>
 
 </html>
