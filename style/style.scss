@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'OpenReg';
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'OpenBold';
+    src: url("../fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'OpenLi';
+    src: url("../fonts/OpenSans-Light.ttf");
+}
+
+@font-face {
+    font-family: 'OpenLiI';
+    src: url("../fonts/OpenSans-LightItalic.ttf");
+}
+
+@font-face {
+    font-family: 'OpenRegI';
+    src: url("../fonts/OpenSans-Italic.ttf");
+}
+
+* {
+    font-family: 'OpenReg';
+    user-select: none;
+}
+
+div,
+button {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background: rgb(49, 56, 65);
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid lighten($color: rgb(49, 56, 65), $amount: 10%);
+    .nav_gripbar {
+        flex-grow: 1;
+        text-align: center;
+        -webkit-app-region: drag;
+        height: 100%;
+    }
+    .nav_toolbar {
+        display: flex;
+        height: 100%;
+        .nav_icon {
+            height: 100%;
+            padding: 5px 10px;
+            img {
+                height: 100%;
+            }
+        }
+    }
+    .nav_controlbar {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        .nav_label {
+            margin-right: 20px;
+        }
+    }
+    .nav_name {
+        position: absolute;
+        height: 100%;
+        padding: 0 10px;
+        background: rgb(49, 56, 65);
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+    }
+}
+
+button {
+    &.btn_nav {
+        font-family: OpenReg, sans-serif;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        color: white;
+        padding: 0 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &:hover {
+            color: darken($color: #ed671a, $amount: 2%);
+            background: darken($color: rgb(49, 56, 65), $amount: 5%);
+        }
+    }
+    &.btn_control {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        height: 100%;
+        padding: 5px;
+        background: rgba(0, 0, 0, 0);
+        color: white;
+        img {
+            height: 100%;
+        }
+        &:hover {
+            background: lighten($color: rgb(49, 56, 65), $amount: 10%);
+        }
+        &.close:hover {
+            background: rgb(148, 41, 41);
+        }
+    }
+}
