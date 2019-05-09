@@ -400,6 +400,34 @@ div.page {
     }
     .imageContainer {
         width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        .image {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            .imageWrapper {
+                height: 150px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    max-height: 100%;
+                    max-width: 100%;
+                }
+            }
+            .toolbar {
+                display: flex;
+                height: 50px;
+                align-items: center;
+                justify-content: center;
+                .btn {
+                    font-family: OpenLi, sans-serif;
+                    font-size: 14px;
+                }
+            }
+        }
     }
 }
 

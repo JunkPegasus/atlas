@@ -512,6 +512,54 @@ div.page .content .toolbar .right input:focus {
 
 .container .imageContainer {
   width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .imageContainer .image {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.container .imageContainer .image .imageWrapper {
+  height: 150px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .imageContainer .image .imageWrapper img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.container .imageContainer .image .toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .imageContainer .image .toolbar .btn {
+  font-family: OpenLi, sans-serif;
+  font-size: 14px;
 }
 
 .nav_extension {
