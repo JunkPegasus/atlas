@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atlas - Login</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_toolbar">
+            <div class="nav_icon"><img src="img/icon/SVG/atlas.svg"></div>
+        </div>
+        <div class="nav_gripbar"> </div>
+        <div class="nav_name">Atlas - Login</div>
+        <div class="nav_controlbar">
+            <button class="btn_control" onclick="minimizeApp()"><img src="img/icon/SVG/minimize.svg"></button>
+            <button class="btn_control close" onclick="closeApp()"><img src="img/icon/SVG/close.svg"></button>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <img class="logo" src="img/icon/SVG/logo.svg">
+        <form class="main" action="#" method="POST" onsubmit="return loginUser()">
+            <input type="text" required placeholder="Benutzername" name="username" id="username">
+            <input type="password" required placeholder="Passwort" name="password" id="password">
+            <button type="submit" name="submit">Einloggen</button>
+            <div class="loginErrorText">
+
+            </div>
+        </form>
+    </div>
+
+    <script>
+        window.$ = window.jQuery = require('jquery');
+    </script>
+    <script src="js/workflow.js"></script>
+    <script src="js/html.js"></script>
+    <script src="js/ajax.js"></script>
+</body>
+
+</html>

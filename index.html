@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Atlas</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 
@@ -30,20 +30,19 @@
             <div class="tools">
                 <div class="btn"><img src="img/icon/SVG/refresh.svg"></div>
             </div>
-            <div class="list">
-                <div class="item">
-                    <div class="name">Berichte</div>
-                </div>
-                <div class="item">
-                    <div class="name">Vorstände</div>
-                </div>
-                <div class="item">
-                    <div class="name">Slides</div>
-                </div>
-            </div>
+            <div class="list" id="objectlist"></div>
         </div>
         <div class="content">
-            <div class="grid">
+            <div class="toolbar">
+                <div class="left">
+                    <div class="btn"><img src="img/icon/SVG/refresh.svg"></div>
+                    <div class="btn"><img src="img/icon/SVG/add.svg"></div>
+                </div>
+                <div class="right">
+                    <input type="text" class="searchObj" placeholder="Suchen" oninput="searchObject(this)">
+                </div>
+            </div>
+            <div class="grid" id="subgrid">
                 <div class="row header">
                     <div class="column column-1 header">Name</div>
                     <div class="column column-2 header">Views</div>
@@ -56,9 +55,12 @@
             </div>
         </div>
     </div>
-    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script>
+        window.$ = window.jQuery = require('jquery');
+    </script>
     <script src="js/workflow.js"></script>
-    <script src="js/html.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/ajax.js"></script>
 </body>
 
 </html>

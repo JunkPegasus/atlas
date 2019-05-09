@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atlas - Inhalte</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_toolbar">
+            <div class="nav_icon"><img src="img/icon/SVG/atlas.svg"></div>
+            <button class="btn_nav">Datei</button>
+            <button class="btn_nav">Bilder hochladen</button>
+        </div>
+        <div class="nav_gripbar"> </div>
+        <div class="nav_name">Atlas - Inhalte</div>
+        <div class="nav_controlbar">
+            <button class="btn_control" onclick="minimizeApp()"><img src="img/icon/SVG/minimize.svg"></button>
+            <button class="btn_control close" onclick="closeApp()"><img src="img/icon/SVG/close.svg"></button>
+        </div>
+    </nav>
+    <div class="nav_extension fileMenu">
+        <div class="entry">Speichern</div>
+        <div class="entry">Veröffentlichen/Verstecken</div>
+        <div class="entry">Aktualisieren</div>
+        <div class="seperator"></div>
+        <div class="entry">Löschen</div>
+        <div class="seperator"></div>
+        <div class="entry">Schließen</div>
+    </div>
+
+    <div class="container">
+        <div class="dataContainer">
+            <h2>Altkleidersammlung</h2>
+            <div class="input">
+                <div class="name">Titel</div>
+                <input type="text" id="name" placeholder="Name">
+            </div>
+            <div class="input">
+                <div class="name">Ort</div>
+                <input type="text" id="ort" placeholder="Ort">
+            </div>
+            <div class="input">
+                <div class="name">Datum</div>
+                <input type="text" id="date" placeholder="Datum">
+            </div>
+            <div class="input">
+                <div class="name">Bericht</div>
+                <textarea id="bericht" placeholder="Bericht"></textarea>
+            </div>
+        </div>
+        <div class="imageContainer"></div>
+    </div>
+
+    <script>
+        window.$ = window.jQuery = require('jquery');
+    </script>
+    <script src="js/workflow.js"></script>
+    <script src="js/html.js"></script>
+    <script src="js/ajax.js"></script>
+</body>
+
+</html>
