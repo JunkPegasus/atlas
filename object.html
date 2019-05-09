@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <div class="overallMain">
     <nav>
         <div class="nav_toolbar">
             <div class="nav_icon"><img src="img/icon/SVG/atlas.svg"></div>
@@ -33,32 +34,17 @@
 
     <div class="container">
         <div class="dataContainer">
-            <h2>Altkleidersammlung</h2>
-            <div class="input">
-                <div class="name">Titel</div>
-                <input type="text" id="name" placeholder="Name">
-            </div>
-            <div class="input">
-                <div class="name">Ort</div>
-                <input type="text" id="ort" placeholder="Ort">
-            </div>
-            <div class="input">
-                <div class="name">Datum</div>
-                <input type="text" id="date" placeholder="Datum">
-            </div>
-            <div class="input">
-                <div class="name">Bericht</div>
-                <textarea id="bericht" placeholder="Bericht"></textarea>
-            </div>
+            <h2 id="title"></h2>
         </div>
         <div class="imageContainer"></div>
     </div>
-
+</div>
     <script>
         window.$ = window.jQuery = require('jquery');
     </script>
     <script src="js/workflow.js"></script>
     <script src="js/html.js"></script>
+    <script src="js/object.js"></script>
     <script src="js/ajax.js"></script>
 </body>
 

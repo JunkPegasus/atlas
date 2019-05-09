@@ -51,6 +51,15 @@ html {
   overflow: hidden;
 }
 
+div.overallMain {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #47515e;
+}
+
 img {
   user-select: none;
   -moz-user-select: none;
@@ -73,7 +82,8 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #2a3038;
+  border-bottom: 1px solid #353d47;
+  background: #2a3038;
 }
 
 nav .nav_gripbar {
@@ -119,7 +129,7 @@ nav .nav_name {
   position: absolute;
   height: 100%;
   padding: 0 10px;
-  background: #313841;
+  background: #2a3038;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -144,7 +154,7 @@ button.btn_nav {
 
 button.btn_nav:hover {
   color: #ea6112;
-  background: #262b32;
+  background: #242930;
 }
 
 button.btn_control {
@@ -179,7 +189,7 @@ div.page .sidemenu {
   position: absolute;
   top: 30px;
   left: 0;
-  border-right: 1px solid #2a3038;
+  border-right: 1px solid #353d47;
 }
 
 div.page .sidemenu .tools {
@@ -221,7 +231,7 @@ div.page .sidemenu .list .item {
   display: flex;
   padding: 3px 20px;
   cursor: pointer;
-  color: gray;
+  color: #b3b3b3;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -270,7 +280,8 @@ div.page .content .grid .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #2f353e;
+  border-bottom: 1px solid #353d47;
+  border-top: 1px solid #353d47;
   cursor: pointer;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -283,7 +294,7 @@ div.page .content .grid .row .column {
 }
 
 div.page .content .grid .row .column:not(:last-of-type) {
-  border-right: 1px solid #2f353e;
+  border-right: 1px solid #353d47;
 }
 
 div.page .content .grid .row .column.header {
@@ -379,13 +390,13 @@ div.page .content .toolbar .right input {
   padding: 3px 8px;
   color: white;
   background: #47515e;
-  border: 1px solid #2f353e;
+  border: 1px solid #353d47;
   outline: none;
   width: 200px;
 }
 
 div.page .content .toolbar .right input:focus {
-  border: 1px solid #333b44;
+  border: 1px solid #ea6112;
 }
 
 .wrapper {
@@ -428,7 +439,7 @@ div.page .content .toolbar .right input:focus {
   border: none;
   margin: 0 0 10px 0;
   background: #47515e;
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #353d47;
   outline: none;
 }
 
@@ -468,7 +479,7 @@ div.page .content .toolbar .right input:focus {
 
 .container .dataContainer {
   width: 40%;
-  border-right: 1px solid #2a3038;
+  border-right: 1px solid #353d47;
   padding: 10px;
 }
 
@@ -482,7 +493,7 @@ div.page .content .toolbar .right input:focus {
   padding: 3px 8px;
   color: white;
   background: #47515e;
-  border: 1px solid #2f353e;
+  border: 1px solid #353d47;
   outline: none;
   width: 100%;
   resize: none;
@@ -492,7 +503,7 @@ div.page .content .toolbar .right input:focus {
 
 .container .dataContainer .input input:focus,
 .container .dataContainer .input textarea:focus {
-  border: 1px solid #333b44;
+  border: 1px solid #ea6112;
 }
 
 .container .dataContainer .input textarea {
@@ -506,6 +517,7 @@ div.page .content .toolbar .right input:focus {
 .nav_extension {
   position: fixed;
   z-index: 90;
+  display: none;
 }
 
 .nav_extension.fileMenu {
@@ -513,9 +525,9 @@ div.page .content .toolbar .right input:focus {
   top: 30px;
   color: white;
   background: #313841;
-  border-right: 1px solid #2a3038;
-  border-bottom: 1px solid #2a3038;
-  border-left: 1px solid #2a3038;
+  border-right: 1px solid #353d47;
+  border-bottom: 1px solid #353d47;
+  border-left: 1px solid #353d47;
 }
 
 .nav_extension.fileMenu .entry {
@@ -527,7 +539,7 @@ div.page .content .toolbar .right input:focus {
 
 .nav_extension.fileMenu .entry:hover {
   color: #ea6112;
-  background: #262b32;
+  background: #242930;
 }
 
 .nav_extension.fileMenu .seperator {

@@ -18,6 +18,7 @@ function loginUserRequest(username, password) {
             }
             if (bTry) {
                 if (response.success == true) {
+                    localStorage.user = username
                     createSecondWindow()
                 } else {
                     if (response.data == 1) {

@@ -88,5 +88,5 @@ function createObjectEditWindow() {
         // when you should delete the corresponding element.
         winOE = null
     })
-    winOE.show()
+    winOE.show();
 }
