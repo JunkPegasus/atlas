@@ -4,6 +4,7 @@ const path = require('path')
 const ses = remote.session.fromPartition('persist:name')
 
 function closeApp() {
+    if (remote.getCurrentWindow().id == 2) remote.app.quit()
     remote.getCurrentWindow().close();
 }
 
@@ -51,6 +52,7 @@ function createSecondWindow() {
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
         win = null
+        app.close()
     })
     remote.getCurrentWindow().close();
     win.show()
@@ -63,7 +65,7 @@ function createObjectEditWindow() {
     const height = remote.screen.getPrimaryDisplay().workAreaSize.height
         // Create the browser window.
     winOE = new BrowserWindow({
-        width: width * 0.5,
+        width: width * 0.3,
         height: height * 0.6,
         frame: false,
         transparent: true,

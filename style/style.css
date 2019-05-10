@@ -82,8 +82,8 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #353d47;
-  background: #2a3038;
+  border-bottom: 1px solid #3e4a52;
+  background: #262b32;
 }
 
 nav .nav_gripbar {
@@ -129,7 +129,7 @@ nav .nav_name {
   position: absolute;
   height: 100%;
   padding: 0 10px;
-  background: #2a3038;
+  background: #262b32;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -154,7 +154,7 @@ button.btn_nav {
 
 button.btn_nav:hover {
   color: #ea6112;
-  background: #242930;
+  background: #1b1f24;
 }
 
 button.btn_control {
@@ -185,11 +185,11 @@ div.page {
 
 div.page .sidemenu {
   width: 300px;
-  height: 100%;
+  height: calc(100% - 30px);
   position: absolute;
   top: 30px;
   left: 0;
-  border-right: 1px solid #353d47;
+  border-right: 1px solid #3e4a52;
 }
 
 div.page .sidemenu .tools {
@@ -269,10 +269,14 @@ div.page .content {
   position: absolute;
   left: 300px;
   width: calc(100% - 300px);
+  height: 100%;
+  overflow: hidden;
 }
 
 div.page .content .grid {
   width: 100%;
+  height: calc(100% - 70px);
+  overflow-x: auto;
 }
 
 div.page .content .grid .row {
@@ -280,12 +284,15 @@ div.page .content .grid .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #353d47;
-  border-top: 1px solid #353d47;
   cursor: pointer;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+div.page .content .grid .row.header {
+  border-bottom: 1px solid #3e4a52;
+  border-top: 1px solid #3e4a52;
 }
 
 div.page .content .grid .row .column {
@@ -293,8 +300,8 @@ div.page .content .grid .row .column {
   padding: 2px 6px;
 }
 
-div.page .content .grid .row .column:not(:last-of-type) {
-  border-right: 1px solid #353d47;
+div.page .content .grid .row .column.header:not(:last-of-type) {
+  border-right: 1px solid #3e4a52;
 }
 
 div.page .content .grid .row .column.header {
@@ -390,7 +397,7 @@ div.page .content .toolbar .right input {
   padding: 3px 8px;
   color: white;
   background: #47515e;
-  border: 1px solid #353d47;
+  border: 1px solid #3e4a52;
   outline: none;
   width: 200px;
 }
@@ -439,7 +446,7 @@ div.page .content .toolbar .right input:focus {
   border: none;
   margin: 0 0 10px 0;
   background: #47515e;
-  border-bottom: 1px solid #353d47;
+  border-bottom: 1px solid #3e4a52;
   outline: none;
 }
 
@@ -472,28 +479,20 @@ div.page .content .toolbar .right input:focus {
   height: calc(100% - 30px);
   left: 0;
   top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.container .dataContainer {
-  width: 40%;
-  border-right: 1px solid #353d47;
   padding: 10px;
 }
 
-.container .dataContainer .input {
+.container .input {
   width: 100%;
   margin-bottom: 10px;
 }
 
-.container .dataContainer .input input,
-.container .dataContainer .input textarea {
+.container .input input,
+.container .input textarea {
   padding: 3px 8px;
   color: white;
   background: #47515e;
-  border: 1px solid #353d47;
+  border: 1px solid #3e4a52;
   outline: none;
   width: 100%;
   resize: none;
@@ -501,65 +500,13 @@ div.page .content .toolbar .right input:focus {
           box-sizing: border-box;
 }
 
-.container .dataContainer .input input:focus,
-.container .dataContainer .input textarea:focus {
+.container .input input:focus,
+.container .input textarea:focus {
   border: 1px solid #ea6112;
 }
 
-.container .dataContainer .input textarea {
+.container .input textarea {
   height: 300px;
-}
-
-.container .imageContainer {
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.container .imageContainer .image {
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-}
-
-.container .imageContainer .image .imageWrapper {
-  height: 150px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.container .imageContainer .image .imageWrapper img {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.container .imageContainer .image .toolbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.container .imageContainer .image .toolbar .btn {
-  font-family: OpenLi, sans-serif;
-  font-size: 14px;
 }
 
 .nav_extension {
@@ -573,9 +520,9 @@ div.page .content .toolbar .right input:focus {
   top: 30px;
   color: white;
   background: #313841;
-  border-right: 1px solid #353d47;
-  border-bottom: 1px solid #353d47;
-  border-left: 1px solid #353d47;
+  border-right: 1px solid #3e4a52;
+  border-bottom: 1px solid #3e4a52;
+  border-left: 1px solid #3e4a52;
 }
 
 .nav_extension.fileMenu .entry {
@@ -587,10 +534,37 @@ div.page .content .toolbar .right input:focus {
 
 .nav_extension.fileMenu .entry:hover {
   color: #ea6112;
-  background: #242930;
+  background: #1b1f24;
 }
 
 .nav_extension.fileMenu .seperator {
+  margin: 5px 10px;
+  border: 0.5px solid white;
+}
+
+.nav_extension.imageMenu {
+  left: 96.8px;
+  top: 30px;
+  color: white;
+  background: #313841;
+  border-right: 1px solid #3e4a52;
+  border-bottom: 1px solid #3e4a52;
+  border-left: 1px solid #3e4a52;
+}
+
+.nav_extension.imageMenu .entry {
+  padding: 4px 20px;
+  cursor: pointer;
+  font-family: OpenLi, sans-serif;
+  font-size: 13px;
+}
+
+.nav_extension.imageMenu .entry:hover {
+  color: #ea6112;
+  background: #1b1f24;
+}
+
+.nav_extension.imageMenu .seperator {
   margin: 5px 10px;
   border: 0.5px solid white;
 }

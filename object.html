@@ -5,61 +5,44 @@
     <meta charset="UTF-8">
     <title>Atlas - Inhalte</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/scrollbar.css">
 </head>
 
 <body>
     <div class="overallMain">
-    <nav>
-        <div class="nav_toolbar">
-            <div class="nav_icon"><img src="img/icon/SVG/atlas.svg"></div>
-            <button class="btn_nav">Datei</button>
-            <button class="btn_nav">Bilder hochladen</button>
-        </div>
-        <div class="nav_gripbar"> </div>
-        <div class="nav_name">Atlas - Inhalte</div>
-        <div class="nav_controlbar">
-            <button class="btn_control" onclick="minimizeApp()"><img src="img/icon/SVG/minimize.svg"></button>
-            <button class="btn_control close" onclick="closeApp()"><img src="img/icon/SVG/close.svg"></button>
-        </div>
-    </nav>
-    <div class="nav_extension fileMenu">
-        <div class="entry">Speichern</div>
-        <div class="entry">Veröffentlichen/Verstecken</div>
-        <div class="entry">Aktualisieren</div>
-        <div class="seperator"></div>
-        <div class="entry">Löschen</div>
-        <div class="seperator"></div>
-        <div class="entry">Schließen</div>
-    </div>
-
-    <div class="container">
-        <div class="dataContainer">
-            <h2 id="title"></h2>
-        </div>
-        <div class="imageContainer">
-            <div class="image">
-                <div class="imageWrapper">
-                    <img src="http://via.placeholder.com/400x300">
-                </div>
-                <div class="toolbar">
-                    <div class="btn">Löschen</div>
-                    <div class="btn">Veröffentlichen</div>
-                    <div class="btn">Titelbild</div>
-                </div>
+        <nav>
+            <div class="nav_toolbar">
+                <div class="nav_icon"><img src="img/icon/SVG/atlas.svg"></div>
+                <button class="btn_nav" onclick="openNavExtension('fileMenu')">Datei</button>
+                <button class="btn_nav" onclick="openNavExtension('imageMenu')">Bilder</button>
             </div>
-            <div class="image">
-                    <div class="imageWrapper">
-                        <img src="http://via.placeholder.com/300x400">
-                    </div>
-                    <div class="toolbar">
-                        <div class="btn">Löschen</div>
-                        <div class="btn">Veröffentlichen</div>
-                        <div class="btn">Titelbild</div>
-                    </div>
-                </div>
+            <div class="nav_gripbar"> </div>
+            <div class="nav_name">Atlas - Inhalte</div>
+            <div class="nav_controlbar">
+                <button class="btn_control" onclick="minimizeApp()"><img src="img/icon/SVG/minimize.svg"></button>
+                <button class="btn_control close" onclick="closeApp()"><img src="img/icon/SVG/close.svg"></button>
+            </div>
+        </nav>
+        <div class="nav_extension fileMenu">
+            <div class="entry">Speichern</div>
+            <div class="entry">Veröffentlichen/Verstecken</div>
+            <div class="entry">Aktualisieren</div>
+            <div class="seperator"></div>
+            <div class="entry">Löschen</div>
+            <div class="seperator"></div>
+            <div class="entry">Schließen</div>
+        </div>
+        <div class="nav_extension imageMenu">
+            <div class="entry">Anzeigen</div>
+            <div class="entry">Hochladen</div>
+        </div>
+
+        <div class="container">
+            <div class="dataContainer">
+                <h2 id="title"></h2>
+            </div>
         </div>
     </div>
-</div>
     <script>
         window.$ = window.jQuery = require('jquery');
     </script>
